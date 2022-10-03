@@ -11,5 +11,5 @@ export interface IChildren {
 }
 
 export interface IResult {
-  [key: string]: string;
+  [key: string]: number;
 }

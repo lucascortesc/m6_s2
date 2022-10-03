@@ -3,8 +3,13 @@ import { FormSchema } from "../../Validation";
 import { useForm } from "react-hook-form";
 import { Form } from "./styles";
 import { FormRequest } from "../../Interfaces";
+import { useAntecipation } from "../../Providers/Antecipation";
+import { useEffect, useState } from "react";
 
 export const MainForm = () => {
+  const [isLoading, setIsLoading] = useState<boolean>();
+  const { getResult } = useAntecipation();
+
   const {
     register,
     handleSubmit,
@@ -12,7 +17,7 @@ export const MainForm = () => {
   } = useForm<FormRequest>({ resolver: yupResolver(FormSchema) });
 
   const onSubmit = (data: FormRequest) => {
-    console.log(data);
+    getResult(data, setIsLoading);
   };
 
   return (
