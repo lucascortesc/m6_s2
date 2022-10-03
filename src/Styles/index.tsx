@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   list-style: none;
   text-decoration: none;
   
-  font-family: 'Montserrat';
+  font-family: "Source Sans Pro";
 }
 
 button {
