@@ -30,6 +30,13 @@ export const AntecipationProvider = ({ children }: IChildren) => {
       setIsLoading(false);
     } catch (err) {
       toast.error("Algo deu errado, tente novamente");
+      setResult({
+        "1": 0,
+        "15": 0,
+        "30": 0,
+        "90": 0,
+      });
+      setIsLoading(false);
     }
   };
 

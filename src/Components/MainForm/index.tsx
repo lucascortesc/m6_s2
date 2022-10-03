@@ -1,7 +1,7 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FormSchema } from "../../Validation";
 import { useForm } from "react-hook-form";
-import { Form } from "./styles";
+import { Form, Loading } from "./styles";
 import { FormRequest } from "../../Interfaces";
 import { useAntecipation } from "../../Providers/Antecipation";
 import { useEffect, useState } from "react";
@@ -41,9 +41,13 @@ export const MainForm = () => {
           <label htmlFor="">Informe o percentual de MDR *</label>
           <input type="text" id="mdr" {...register("mdr")} />
         </div>
-        <button className="form__submitButton" type="submit">
-          ENVIAR
-        </button>
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <button className="form__submitButton" type="submit">
+            ENVIAR
+          </button>
+        )}
       </div>
     </Form>
   );

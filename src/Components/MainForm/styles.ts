@@ -68,3 +68,27 @@ export const Form = styled.form`
     font-size: 11px;
   }
 `;
+
+export const Loading = styled.div`
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  border-style: inset;
+  border-bottom: 2px solid rgba(102, 175, 233, 1);
+  border-top: 2px solid rgba(102, 175, 233, 1);
+  border-left: 2px solid rgba(102, 175, 233, 1);
+  border-right: 2px solid transparent;
+
+  border-radius: 50%;
+
+  animation: spin 0.5s infinite linear;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+`;
