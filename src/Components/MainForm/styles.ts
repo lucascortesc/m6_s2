@@ -61,4 +61,10 @@ export const Form = styled.form`
       filter: brightness(1.1);
     }
   }
+
+  .error {
+    color: red;
+    font-style: bold;
+    font-size: 11px;
+  }
 `;
