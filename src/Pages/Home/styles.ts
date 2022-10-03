@@ -12,10 +12,12 @@ export const HomeContainer = styled.div`
 `;
 
 export const MainContent = styled.div`
-  width: 680px;
+  width: 608px;
   height: 440px;
 
   background-color: rgba(255, 255, 255, 1);
 
   border-radius: 4px;
+
+  display: flex;
 `;
