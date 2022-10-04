@@ -24,7 +24,9 @@ export const AntecipationProvider = ({ children }: IChildren) => {
     setIsLoading(true);
 
     try {
-      const response = await axios.post("https://frontend-challenge-7bu3nxh76a-uc.a.run.app", data);
+      const response = await axios.post("https://frontend-challenge-7bu3nxh76a-uc.a.run.app", data, {
+        timeout: 7000,
+      });
 
       setResult(response.data);
       setIsLoading(false);
